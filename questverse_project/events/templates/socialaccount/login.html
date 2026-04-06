@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Login - QuestVerse</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="login-container">
+    <h1>QuestVerse 🚀</h1>
+    <h2>Sign In via Google</h2>
+    <p>You are about to sign in using your Google account.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="google-btn">
+            🔵 Continue with Google
+        </button>
+    </form>
+
+    <br>
+    <a href="/accounts/login/" class="back-link">⬅ Back</a>
+</div>
+
+</body>
+</html>
